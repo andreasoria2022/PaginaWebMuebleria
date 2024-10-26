@@ -64,7 +64,7 @@ header h1 {
     transition: opacity 2s ease-in-out;
 }
 
-.fading-images_item img {
+.fading-images_item img{
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -120,7 +120,7 @@ header h1 {
      
 /* Secciones */
 section{
-    margin: 50px 0 50px 0;
+    margin: 50px 0;
 }
 /* Historia */
 #Historia{
@@ -206,4 +206,23 @@ footer a:any-link{
     width: 100%;
     z-index: 10; /* Asegúrate de que esté por encima del header */
     background-color: #47494855;
+}
+
+@media(max-width:768px){
+    header h1 {
+        font-size: 4rem;
+    }
+
+    .text-overlay h1{
+        padding: 20px;
+    }
+    .navbar-nav{
+        font-size: 1.2rem;
+    }
+}
+
+.fading-images_item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
