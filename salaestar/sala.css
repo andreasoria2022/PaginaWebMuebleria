@@ -1,0 +1,100 @@
+body{
+    background-color: black;
+    color: white;
+}
+
+img {
+    width: 100%; /* Ajusta el tamaño de las imágenes al 100% del contenedor */
+    max-width: 800px; /* Ajusta este valor según el tamaño deseado */
+    height: auto; /* Mantén la proporción de las imágenes */
+    border-radius: 15px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidad */
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Transiciones suaves */
+}
+
+/* Efecto al pasar el ratón por encima solo en las secciones específicas */
+#Nuestros-Muebles img:hover, #Muebles2 img:hover {
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño */
+    opacity: 0.9; /* Reduce ligeramente la opacidad */
+}
+
+video{
+    width: 200px;
+}
+.left, .center, .right{
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.left img,video, .center img,video, .right img,video{
+    width: 100%;
+    margin: 5px;
+    border-radius: 15px;
+}
+
+
+.f-gap{
+    gap: 10px;
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+    
+}
+.sala{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.sala h1{
+    font-size: 5rem;
+        font-weight: bold;
+        color: white;
+        text-shadow: 3px 3px 0 black;
+}
+.izq, .der {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#Nuestros-Muebles {
+    border: 5px solid black; /* Añade un borde negro de 5px */
+    margin-top: 50px; /* Añade un margen superior para separar la sección de las imágenes anteriores */
+    padding: 20px; /* Añade un relleno interno para que el contenido no esté pegado al borde */
+}
+
+#Nuestros-Muebles .contener {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#Nuestros-Muebles .izq img {
+    width: 100%; /* Asegura que las imágenes ocupen todo el ancho del contenedor */
+    max-width: 900px; /* Ajusta este valor según el tamaño deseado */
+    height: auto; /* Mantén la proporción de las imágenes */
+}
+
+#Muebles2 {
+    border: 5px solid black; /* Añade un borde negro de 5px */
+    margin-top: 50px; /* Añade un margen superior para separar la sección de las imágenes anteriores */
+    padding: 20px; /* Añade un relleno interno para que el contenido no esté pegado al borde */
+}
+
+#Muebles2 .contener {
+    display: flex;
+    justify-content: flex-end; /* Alinea el contenido a la derecha */
+    align-items: center;
+}
+
+#Muebles2 .der img {
+    width: 100%; /* Asegura que las imágenes ocupen todo el ancho del contenedor */
+    max-width: 800px; /* Ajusta este valor según el tamaño deseado */
+    height: auto; /* Mantén la proporción de las imágenes */
+}

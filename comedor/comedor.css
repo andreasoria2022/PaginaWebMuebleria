@@ -1,0 +1,98 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: black;
+}
+
+.container {
+    width: 100%;
+    display: grid;
+    grid-template-areas: 
+        "top top top"
+        "left center right"
+        "bottom bottom bottom";
+    gap: 10px;
+    } 
+
+.section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+
+.f-gap {
+    gap: 10px;
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+}
+
+.comedor {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.comedor h1 {
+    font-size: 5rem;
+    font-weight: bold;
+    color: white;
+    text-shadow: 3px 3px 0 black;
+}
+
+.top-left {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: white;
+}
+
+.center {
+    grid-area: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    width: 100%;
+}
+
+.center video {
+    height: 100%;
+    width: auto;
+    object-fit: cover;
+    transition: transform 0.5s ease, height 0.5s ease, width 0.5s ease;
+}
+
+#vertical-scroll, #vertical-scroll2 {
+    border: 5px solid black; /* Añade un borde negro de 5px */
+    margin: 20px 0; /* Añade un margen superior e inferior para separar las secciones */
+    padding: 10px; /* Añade un relleno interno para que el contenido no esté pegado al borde */
+    background-color: black 
+}
+
+#vertical-scroll .contener, #vertical-scroll2 .contener {
+    display: flex;
+    align-items: center;
+    background-color: black;
+}
+
+#vertical-scroll .contener {
+    justify-content: flex-start; /* Alinea el contenido a la izquierda */
+}
+
+#vertical-scroll2 .contener {
+    justify-content: flex-end; /* Alinea el contenido a la derecha */
+}
+
+#vertical-scroll .izq img, #vertical-scroll2 .der img {
+    width: 100%; /* Asegura que las imágenes ocupen todo el ancho del contenedor */
+    max-width: 800px; /* Ajusta este valor según el tamaño deseado */
+    height: auto; /* Mantén la proporción de las imágenes */
+    transition: transform 0.5s ease, height 0.5s ease, width 0.5s ease;
+}

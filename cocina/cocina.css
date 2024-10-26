@@ -1,0 +1,79 @@
+body {
+    margin: 0px;
+    overflow-x: hidden; /* Oculta el desbordamiento horizontal */
+    background-color: #353434; /* Fondo gris */
+}
+
+.horizontal-scroll {
+    display: flex;
+    height: 100vh; /* Altura completa de la ventana */
+    width: 400vw; /* Ancho total para 4 secciones */
+    transition: width 0.5s ease; /* Transición suave para el ancho */
+}
+
+.section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    color: white;
+    background-color: #333;
+    border: 1px solid white;
+}
+
+img {
+    width: 100%; /* Ajusta el tamaño de las imágenes al 100% del contenedor */
+    max-width: 800px; /* Ajusta este valor según el tamaño deseado */
+    height: auto; /* Mantén la proporción de las imágenes */
+    border-radius: 15px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidad */
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Transiciones suaves */
+}
+
+.section img:hover, #vertical-scroll img:hover, #vertical-scroll2 img:hover {
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño */
+    opacity: 0.9; /* Reduce ligeramente la opacidad */
+}
+
+body.scrolled .horizontal-scroll {
+    width: 100vw; /* Ancho completo de la ventana */
+}
+
+.section h1 {
+    font-size: 2em;
+    text-align: center;
+    color: white;
+}
+
+#vertical-scroll, #vertical-scroll2 {
+    border: 5px solid #333; /* Añade un borde negro de 5px */
+    margin: 20px 0; /* Añade un margen superior e inferior para separar las secciones */
+    padding: 10px; /* Añade un relleno interno para que el contenido no esté pegado al borde */
+    background-color: #353434; /* Fondo gris */
+}
+
+#vertical-scroll .contener {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Alinea el contenido a la izquierda */
+    background-color: #333;
+}
+
+#vertical-scroll2 .contener {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Alinea el contenido a la derecha */
+    background-color: #333;
+}
+
+#vertical-scroll .izq img, #vertical-scroll2 .der img {
+    width: 100%; /* Asegura que las imágenes ocupen todo el ancho del contenedor */
+    max-width: 800px; /* Ajusta este valor según el tamaño deseado */
+    height: auto; /* Mantén la proporción de las imágenes */
+}
+
+#vertical-scroll2 {
+    margin-top: 10px; /* Añade un margen superior para separar la sección de las imágenes anteriores */
+    padding: 10px; /* Añade un relleno interno para que el contenido no esté pegado al borde */
+}

@@ -1,0 +1,209 @@
+html {
+    scroll-behavior: smooth;
+  }
+header {
+    width: 100%;
+    height: 100vh;
+    
+    color: white;
+    
+    background-size: cover;
+}
+/* Contenedor de la barra de navegación */
+.navbar-container {
+    display: flex;
+    justify-content: end;
+}
+
+/* Lista de navegación */
+.navbar-container ul {
+    margin-left: auto;
+
+}
+header nav a {
+    color: rgb(255, 255, 255) !important;
+}
+.navbar-nav{
+    font-size: 1.5rem;
+}
+.navbar-toggler-icon {
+    filter: invert(1) brightness(2);
+}
+
+header h1 {
+    font-family: "Roboto Slab", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 8rem;
+    position: absolute; /* Añade esta línea */
+    top: 10px;
+    left: 10px; /* Ajusta según sea necesario */
+    margin: 0; /* Asegúrate de que no haya margen */
+}
+.text-overlay h1{
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Cambia esto para alinear el contenido en la parte superior */
+    align-items: flex-start; /* Cambia esto para alinear el contenido a la izquierda */
+    padding: 65px; /* Añade un poco de relleno para separar el texto del borde */
+}
+
+.fading-images {
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    overflow: hidden;
+}
+
+.fading-images_item {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+}
+
+.fading-images_item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.text-overlay {
+    position: absolute;
+    top: 20px; /* Ajusta según sea necesario */
+    left: 20px; /* Ajusta según sea necesario */
+    color: white;
+    text-align: left;
+    padding: 45px;
+}
+
+.text-overlay h1 {
+    margin: 0;
+    font-family: "Roboto Slab", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 8rem;
+}
+.fading-images_item p {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+    font-size: 5rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fading-images_item:nth-child(1) {
+    animation: fade 20s infinite;
+}
+
+.fading-images_item:nth-child(2) {
+    animation: fade 20s infinite 8s;
+}
+
+.fading-images_item:nth-child(3) {
+    animation: fade 20s infinite 4s;
+}
+
+@keyframes fade {
+    0%, 100% { opacity: 0; }
+    20%, 80% { opacity: 1; }
+}
+.titulo h2 {
+    font-size: 3rem;
+}
+     
+/* Secciones */
+section{
+    margin: 50px 0 50px 0;
+}
+/* Historia */
+#Historia{
+    margin-top: 0;
+}
+#Historia .historia-info{
+    padding: 0 20px 0 20px;
+    width: 100%;
+    & h2{
+        font-size: 3rem;
+    }
+    & p{
+        font-size: 1.5rem;
+    }
+}
+.justificado {
+    text-align: justify;
+}
+.card-img-top {
+    height: 300px; /* Ajusta la altura según tus necesidades */
+    object-fit: cover; /* Esto asegura que la imagen se recorte para llenar el contenedor */
+}
+.grid-container {
+    display: grid;
+    place-content: center;
+    height: 100vh; /* Ajusta según sea necesario */
+}
+.carousel-item {
+    margin-left: 100px; /* Cambia este valor según tus necesidades */
+    margin-right: 0; /* Cambia este valor según tus necesidades */
+  }
+  h2 {
+    font-size: 3rem; /* Ajusta el tamaño según tus necesidades */
+}
+#Ubicacion .container .info, #Ubicacion .container .map{
+    width: 50%;
+    height: 300px;
+}
+#Ubicacion .container .info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #474948;
+    color: white;
+    & h3{
+        font-size: 2rem;
+    }
+}
+#Ubicacion .container .map iframe{
+    width: 100%;
+    height: 100%;
+}
+footer{
+    color: white;
+    width: 100%;
+    background-color: #474948;
+}
+footer a:any-link{
+    color: white;
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    background-color: black; /* Fondo negro */
+    border-radius: 50%;
+    padding: 10px; /* Espacio alrededor del icono */
+}
+
+.carousel-control-prev-icon::after, .carousel-control-next-icon::after {
+    content: ''; /* Esto asegura que el icono se muestre */
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    background-size: 100%, 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: invert(1); /* Hace que el icono sea blanco */
+}
+
+.navbar {
+    position: fixed; /* Cambia a fixed */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10; /* Asegúrate de que esté por encima del header */
+    background-color: #47494855;
+}
